@@ -126,19 +126,19 @@ $Event(0, Default, function() {
         EnableCharacterCollision(46535890);
     }
     
-    $InitializeCommonEvent(0, 90015000, 0, 46530800, 902500300, 30, 0, 0);
+    $InitializeCommonEvent(0, 90015000, 0, 46530800, 903251600, 30, 0, 0);
     $InitializeCommonEvent(0, 90015030, 0, 46530800, 30, 920210, 0);
     $InitializeCommonEvent(0, 90015002, 0, 0, 46530800, 46530800, 1020, 920210, 11290, 903251600, 46530800);
     $InitializeCommonEvent(0, 9005810, 46530800, 46530500, 46531500, 5);
     $InitializeCommonEvent(0, 90015005, 46531500, 46532800, 46530800);
     $InitializeCommonEvent(0, 90015000, 0, 46530810, 902500300, 30, 0, 0);
     $InitializeCommonEvent(0, 90015030, 0, 46530810, 30, 920210, 0);
-    $InitializeCommonEvent(0, 90015002, 0, 0, 46530810, 46530810, 1020, 920210, 11290, 903251600, 46530810);
+    $InitializeCommonEvent(0, 90015002, 0, 0, 46530810, 46530810, 1020, 920210, 11290, 902500300, 46530810);
     $InitializeCommonEvent(0, 9005810, 46530810, 46530500, 46531500, 5);
     $InitializeCommonEvent(0, 90015005, 46531500, 46532800, 46530810);
-    $InitializeCommonEvent(0, 90015000, 0, 46530820, 902500311, 30, 0, 0);
+    $InitializeCommonEvent(0, 90015000, 0, 46530820, 902500300, 30, 0, 0);
     $InitializeCommonEvent(0, 90015030, 0, 46530820, 30, 920210, 0);
-    $InitializeCommonEvent(0, 90015002, 0, 0, 46530820, 46530820, 1020, 920210, 11290, 903251600, 46530820);
+    $InitializeCommonEvent(0, 90015002, 0, 0, 46530820, 46530820, 1020, 920210, 11290, 902500300, 46530820);
     $InitializeCommonEvent(0, 9005810, 46530820, 46530500, 46531500, 5);
     $InitializeCommonEvent(0, 90015005, 46531500, 46532800, 46530820);
     GotoIf(S0, Signed(13771) != 0);
@@ -193,5 +193,3 @@ $Event(46532500, Restart, function(chrEntityId, spEffectId, eventFlagId) {
     WaitFor(CharacterHasSpEffect(chrEntityId, spEffectId));
     SetEventFlagID(eventFlagId, ON);
 });
-
-

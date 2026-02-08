@@ -3,3 +3,4 @@ project.json
 StormControl/
 StormControl.dll
 regulation.bin.prev
+*.bak

@@ -127,24 +127,24 @@ $Event(0, Default, function() {
         EnableCharacterCollision(46695890);
     }
         
-    $InitializeCommonEvent(0, 90015000, 0, 46690800, 903050500, 30, 0, 0);
+    $InitializeCommonEvent(0, 90015000, 0, 46690800, 904690000, 30, 0, 0);
     $InitializeCommonEvent(0, 90015030, 0, 46690800, 30, 920210, 0);
-    $InitializeCommonEvent(0, 90015002, 0, 0, 46690800, 46690800, 1020, 920210, 11290, 907100300, 46690800);
+    $InitializeCommonEvent(0, 90015002, 0, 0, 46690800, 46690800, 1020, 920210, 11290, 904690000, 46690800);
     $InitializeCommonEvent(0, 9005810, 46690800, 46690500, 46691500, 5);
     $InitializeCommonEvent(0, 90015005, 46691500, 46692800, 46690800);
-    $InitializeCommonEvent(0, 90015000, 0, 46690810, 903050600, 30, 0, 0);
+    $InitializeCommonEvent(0, 90015000, 0, 46690810, 903460600, 30, 0, 0);
     $InitializeCommonEvent(0, 90015030, 0, 46690810, 30, 920210, 0);
-    $InitializeCommonEvent(0, 90015002, 0, 0, 46690810, 46690810, 1020, 920210, 11290, 907100300, 46690810);
+    $InitializeCommonEvent(0, 90015002, 0, 0, 46690810, 46690810, 1020, 920210, 11290, 903460600, 46690810);
     $InitializeCommonEvent(0, 9005810, 46690810, 46690500, 46691500, 5);
     $InitializeCommonEvent(0, 90015005, 46691500, 46692800, 46690810);
-    $InitializeCommonEvent(0, 90015000, 0, 46690820, 903050900, 30, 0, 0);
+    $InitializeCommonEvent(0, 90015000, 0, 46690820, 903400302, 30, 0, 0);
     $InitializeCommonEvent(0, 90015030, 0, 46690820, 30, 920210, 0);
-    $InitializeCommonEvent(0, 90015002, 0, 0, 46690820, 46690820, 1020, 920210, 11290, 907100300, 46690820);
+    $InitializeCommonEvent(0, 90015002, 0, 0, 46690820, 46690820, 1020, 920210, 11290, 903400302, 46690820);
     $InitializeCommonEvent(0, 9005810, 46690820, 46690500, 46691500, 5);
     $InitializeCommonEvent(0, 90015005, 46691500, 46692800, 46690820);
-    $InitializeCommonEvent(0, 90015000, 0, 46690830, 903050900, 30, 0, 0);
+    $InitializeCommonEvent(0, 90015000, 0, 46690830, 905250610, 30, 0, 0);
     $InitializeCommonEvent(0, 90015030, 0, 46690830, 30, 920210, 0);
-    $InitializeCommonEvent(0, 90015002, 0, 0, 46690830, 46690830, 1020, 920210, 11290, 907100300, 46690830);
+    $InitializeCommonEvent(0, 90015002, 0, 0, 46690830, 46690830, 1020, 920210, 11290, 905250610, 46690830);
     $InitializeCommonEvent(0, 9005810, 46690830, 46690500, 46691500, 5);
     $InitializeCommonEvent(0, 90015005, 46691500, 46692800, 46690830);    
     GotoIf(S0, Signed(0) != 0);
@@ -205,5 +205,3 @@ $Event(46692500, Restart, function(chrEntityId, spEffectId, eventFlagId) {
     WaitFor(CharacterHasSpEffect(chrEntityId, spEffectId));
     SetEventFlagID(eventFlagId, ON);
 });
-
-

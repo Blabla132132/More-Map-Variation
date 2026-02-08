@@ -126,19 +126,19 @@ $Event(0, Default, function() {
         EnableCharacterCollision(46645890);
     }
     
-    $InitializeCommonEvent(0, 90015000, 0, 46640800, 904810600, 30, 0, 0);
+    $InitializeCommonEvent(0, 90015000, 0, 46640800, 904670000, 30, 0, 0);
     $InitializeCommonEvent(0, 90015030, 0, 46640800, 30, 920610, 0);
-    $InitializeCommonEvent(0, 90015002, 0, 0, 46640800, 46640800, 1020, 920610, 11290, 904810600, 46640800);
+    $InitializeCommonEvent(0, 90015002, 0, 0, 46640800, 46640800, 1020, 920610, 11290, 904670000, 46640800);
     $InitializeCommonEvent(0, 9005810, 46640800, 46640500, 46641500, 5);
     $InitializeCommonEvent(0, 90015005, 46641500, 46642800, 46640800);
-    $InitializeCommonEvent(0, 90015000, 0, 46640810, 904811000, 30, 0, 0);
+    $InitializeCommonEvent(0, 90015000, 0, 46640810, 905250600, 30, 0, 0);
     $InitializeCommonEvent(0, 90015030, 0, 46640810, 30, 920610, 0);
-    $InitializeCommonEvent(0, 90015002, 0, 0, 46640810, 46640810, 1020, 920610, 11290, 904810600, 46640810);
+    $InitializeCommonEvent(0, 90015002, 0, 0, 46640810, 46640810, 1020, 920610, 11290, 905250600, 46640810);
     $InitializeCommonEvent(0, 9005810, 46640810, 46640500, 46641500, 5);
     $InitializeCommonEvent(0, 90015005, 46641500, 46642800, 46640810);
-    $InitializeCommonEvent(0, 90015000, 0, 46640820, 904580600, 30, 0, 0);
+    $InitializeCommonEvent(0, 90015000, 0, 46640820, 905250600, 30, 0, 0);
     $InitializeCommonEvent(0, 90015030, 0, 46640820, 30, 920610, 0);
-    $InitializeCommonEvent(0, 90015002, 0, 0, 46640820, 46640820, 1020, 920610, 11290, 904810600, 46640820);
+    $InitializeCommonEvent(0, 90015002, 0, 0, 46640820, 46640820, 1020, 920610, 11290, 905250600, 46640820);
     $InitializeCommonEvent(0, 9005810, 46640820, 46640500, 46641500, 5);
     $InitializeCommonEvent(0, 90015005, 46641500, 46642800, 46640820);
     GotoIf(S0, Signed(0) != 0);
@@ -188,5 +188,3 @@ $Event(46642200, Default, function(chrEntityId) {
     DisableCharacter(chrEntityId);
     DisableCharacterCollision(chrEntityId);
 });
-
-
