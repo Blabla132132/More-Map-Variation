@@ -5,3 +5,7 @@ StormControl.dll
 regulation.bin.prev
 *.bak
 nrsc_settings.ini
+nrsc_launcher.exe
+SeamlessCoop/nrsc.dll
+SeamlessCoop/crashpad/crashpad_handler.exe
+SeamlessCoop/locale/english.json
