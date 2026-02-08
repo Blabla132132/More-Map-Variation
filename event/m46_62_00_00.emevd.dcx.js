@@ -10,11 +10,11 @@
 $Event(0, Default, function() {
     
     // Disable flags that will be used to roll for randomness
-    BatchSetEventFlags(64000, 64009, OFF);
+    BatchSetNetworkconnectedEventFlags(64000, 64009, OFF);
     
     // Set a random flag true which rolls what boss to spawn. Depends on amount of bosses in map file.
     // EDIT THIS WHEN ADDING/REMOVING BOSS
-    RandomlySetEventFlagInRange(64000, 64002, ON);
+    RandomlySetNetworkconnectedEventFlagInRange(64000, 64002, ON);
     
     // Disable all the potential character entityids and group entityids. Supports up to 10 variations. Does not need to be edited.
     DisableCharacter(46620800);
@@ -76,8 +76,8 @@ $Event(0, Default, function() {
     if (EventFlag(64000)) {
         
        // Roll to decide what Knight version
-       BatchSetEventFlags(64010, 64019, OFF);
-       RandomlySetEventFlagInRange(64010, 64015, ON);
+       BatchSetNetworkconnectedEventFlags(64010, 64019, OFF);
+       RandomlySetNetworkconnectedEventFlagInRange(64010, 64015, ON);
        
         if (EventFlag(64010)) {
             EnableCharacter(46620800);

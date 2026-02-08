@@ -10,7 +10,7 @@
 $Event(0, Default, function() {
         
     // Disable flags that will be used to roll for randomness
-    BatchSetEventFlags(64000, 64009, OFF);
+    BatchSetNetworkconnectedEventFlags(64000, 64009, OFF);
     
     // Set a random flag true which rolls what boss to spawn. Depends on amount of bosses in map file.
     // EDIT THIS WHEN ADDING/REMOVING BOSS

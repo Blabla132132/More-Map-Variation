@@ -10,11 +10,11 @@
 $Event(0, Default, function() {
         
     // Disable flags that will be used to roll for randomness
-    BatchSetEventFlags(64000, 64009, OFF);
+    BatchSetNetworkconnectedEventFlags(64000, 64009, OFF);
     
     // Set a random flag true which rolls what boss to spawn. Depends on amount of bosses in map file.
     // EDIT THIS WHEN ADDING/REMOVING BOSS
-    RandomlySetEventFlagInRange(64000, 64001, ON);
+    RandomlySetNetworkconnectedEventFlagInRange(64000, 64001, ON);
     
     // Disable all the potential character entityids and group entityids. Supports up to 10 variations. Does not need to be edited.
     DisableCharacter(46550800);
@@ -69,8 +69,8 @@ $Event(0, Default, function() {
     // Roll to decide what Watchdog version
     if (EventFlag(64001)) {
         
-        BatchSetEventFlags(64010, 64019, OFF);
-        RandomlySetEventFlagInRange(64010, 64012, ON);
+        BatchSetNetworkconnectedEventFlags(64010, 64019, OFF);
+        RandomlySetNetworkconnectedEventFlagInRange(64010, 64012, ON);
         
         if (EventFlag(64010)) {
             EnableCharacter(46550810);
