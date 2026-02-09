@@ -24,10 +24,10 @@ $Event(0, Default, function() {
     if (IsMapVariation(2)) {
         $InitializeCommonEvent(0, 90015442, 49682200, 49680200);
     }
-    $InitializeCommonEvent(0, 90065910, 49680200, 49680205, 49680800, 475000, 690047, 49685210, 49680800, 902031000, 0, 0, 0, 0);
-    $InitializeCommonEvent(0, 90065911, 49680200, 49680800, 475000, 49685210, 49680800, 902031000, 0, 0, 0, 0, 0);
+    $InitializeCommonEvent(0, 90065910, 49680200, 49680205, 49680800, 475000, 690047, 49685210, 49680800, 904968000, 0, 0, 0, 0);
+    $InitializeCommonEvent(0, 90065911, 49680200, 49680800, 475000, 49685210, 49680800, 904968000, 0, 0, 0, 0, 0);
     if (!IsMapVariation(2)) {
-        $InitializeCommonEvent(0, 90065900, 49680800, 1, 0, 0, 1050, 475000, 902031000, 49680800);
+        $InitializeCommonEvent(0, 90065900, 49680800, 1, 0, 0, 1050, 475000, 904968000, 49680800);
     }
     $InitializeCommonEvent(0, 90015012, 49685210, 49680200);
     $InitializeCommonEvent(1, 90015012, 0, 49680200);
@@ -35,9 +35,9 @@ $Event(0, Default, function() {
     $InitializeCommonEvent(0, 90015008, 49680205, 49680800, 475000, 49680800, 14771, 0);
     if (IsMapVariation(2)) {
         $InitializeCommonEvent(0, 90015443, 49682200, 49680800);
-        $InitializeCommonEvent(0, 90015023, 49680200, 40, 0, 49685210, 49680800, 902031000, 0, 0, 0, 0);
+        $InitializeCommonEvent(0, 90015023, 49680200, 40, 0, 49685210, 49680800, 904968000, 0, 0, 0, 0);
         $InitializeCommonEvent(0, 90015030, 49680200, 49685210, 40, 475000, 0);
-        $InitializeCommonEvent(0, 90015002, 0, 49680200, 0, 49685210, 1020, 475000, 110320, 902031000, 49680800);
+        $InitializeCommonEvent(0, 90015002, 0, 49680200, 0, 49685210, 1020, 475000, 110320, 904968000, 49680800);
         $InitializeCommonEvent(0, 90015470, 49682200, 49680200, 49680800, 49685210, 0, 0, 49685210);
         $InitializeCommonEvent(0, 90015446, 49685210, 49680200, 49680800, 49682200);
         $InitializeCommonEvent(0, 90015460, 49682200, 49680800);
@@ -122,5 +122,3 @@ L0:
     SetNetworkUpdateRate(49680800, true, CharacterUpdateFrequency.AlwaysUpdate);
     DisplayBossHealthBar(Enabled, chrEntityId, 0, nameId);
 });
-
-
