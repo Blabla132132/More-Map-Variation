@@ -20,7 +20,7 @@ $Event(0, Default, function() {
         if (EventFlag(64000))
         {
             SetSpEffect(10002, 1605000)
-            SetSpEffect(10003, 1605000)
+            SetSpEffect(10003, 4481)
             SetSpEffect(10002, 64000)
         }
         if (EventFlag(64001))
@@ -80,25 +80,25 @@ $Event(0, Default, function() {
     DisableCharacterCollision(46725890);
 
     // Depending on roll, enable characters and group entity ids. Supports up to 10 variations. Does not need to be edited.
-    if (CharacterHasSpEffect(10002, 1605000)) {
+    if (CharacterHasSpEffect(10002, 64000)) {
         EnableCharacter(46720800);
         EnableCharacterCollision(46720800);
         EnableCharacter(46725800);
         EnableCharacterCollision(46725800);
     }
-    if (CharacterHasSpEffect(10002, 64005)) {
+    if (CharacterHasSpEffect(10002, 64001)) {
         EnableCharacter(46720810);
         EnableCharacterCollision(46720810);
         EnableCharacter(46725810);
         EnableCharacterCollision(46725810);
     }
-    if (CharacterHasSpEffect(10002, 64005)) {
+    if (CharacterHasSpEffect(10002, 64002)) {
         EnableCharacter(46720820);
         EnableCharacterCollision(46720820);
         EnableCharacter(46725820);
         EnableCharacterCollision(46725820);
     }
-    if (CharacterHasSpEffect(10002, 64005)) {
+    if (CharacterHasSpEffect(10002, 64003)) {
         EnableCharacter(46720830);
         EnableCharacterCollision(46720830);
         EnableCharacter(46725830);
@@ -119,7 +119,7 @@ $Event(0, Default, function() {
         EnableCharacterCollision(46725850);
     }
 
-    if (CharacterHasSpEffect(10002, 64006)) {
+    if (EventFlag(64006)) {
         EnableCharacter(46720860);
         EnableCharacterCollision(46720860);
         EnableCharacter(46725860);
