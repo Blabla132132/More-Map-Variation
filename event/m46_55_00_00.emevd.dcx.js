@@ -16,26 +16,58 @@ $Event(0, Default, function() {
     // EDIT THIS WHEN ADDING/REMOVING BOSS
     if (HasMultiplayerState(MultiplayerState.Host))
     {
-        RandomlySetEventFlagInRange(64000, 64002, ON);
+        RandomlySetEventFlagInRange(64000, 64001, ON);
         if (EventFlag(64000))
         {
-            SetSpEffect(10002, 1605000)
-            SetSpEffect(10003, 4481)
-            SetSpEffect(10002, 64000)
+            SetEventFlagID(64000, OFF)
+            SetEventFlagID(64000, ON)
         }
         if (EventFlag(64001))
         {
-            SetSpEffect(10002, 64001)
+            SetEventFlagID(64001, OFF)
+            SetEventFlagID(64001, ON)
         }
         if (EventFlag(64002))
         {
-            SetSpEffect(10002, 64002)
+            SetEventFlagID(64002, OFF)
+            SetEventFlagID(64002, ON)
         }
         if (EventFlag(64003))
         {
-            SetSpEffect(10002, 64003)
+            SetEventFlagID(64003, OFF)    
+            SetEventFlagID(64003, ON)
         }
-    } 
+        if (EventFlag(64004))
+        {
+            SetEventFlagID(64004, OFF)            
+            SetEventFlagID(64004, ON)
+        }
+        if (EventFlag(64005))
+        {
+            SetEventFlagID(64005, OFF)            
+            SetEventFlagID(64005, ON)
+        }
+        if (EventFlag(64006))
+        {
+            SetEventFlagID(64006, OFF)               
+            SetEventFlagID(64006, ON)
+        }   
+        if (EventFlag(64007))
+        {
+            SetEventFlagID(64007, OFF)              
+            SetEventFlagID(64007, ON)
+        } 
+        if (EventFlag(64008))
+        {
+            SetEventFlagID(64008, OFF)              
+            SetEventFlagID(64008, ON)  
+        } 
+        if (EventFlag(64009))
+        {
+            SetEventFlagID(64009, OFF)            
+            SetEventFlagID(64009, ON)
+        }
+    }  
     
     // Disable all the potential character entityids and group entityids. Supports up to 10 variations. Does not need to be edited.
     DisableCharacter(46550800);
