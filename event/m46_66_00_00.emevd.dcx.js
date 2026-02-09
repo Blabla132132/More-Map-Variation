@@ -8,61 +8,6 @@
 // ==/EMEVD==
 
 $Event(0, Default, function() {
-    
-    // Disable flags that will be used to roll for randomness
-    BatchSetEventFlags(64150, 64159, OFF);
-    
-    // Set a random flag true which rolls what boss to spawn. Depends on amount of bosses in map file.
-    // EDIT THIS WHEN ADDING/REMOVING BOSS
-    if (HasMultiplayerState(MultiplayerState.Host))    
-        RandomlySetNetworkconnectedEventFlagInRange(64150, 64152, ON);
-    
-    // Disable all the potential character entityids and group entityids. Supports up to 10 variations. Does not need to be edited.
-    DisableCharacter(46660800);
-    DisableCharacterCollision(46660800);
-    DisableCharacter(46665800);
-    DisableCharacterCollision(46665800);
-    DisableCharacter(46660810);
-    DisableCharacterCollision(46660810);
-    DisableCharacter(46665810);
-    DisableCharacterCollision(46665810);
-    DisableCharacter(46660820);
-    DisableCharacterCollision(46660820);
-    DisableCharacter(46665820);
-    DisableCharacterCollision(46665820);
-    DisableCharacter(46660830);
-    DisableCharacterCollision(46660830);
-    DisableCharacter(46665830);
-    DisableCharacterCollision(46665830);
-    DisableCharacter(46660840);
-    DisableCharacterCollision(46660840);
-    DisableCharacter(46665840);
-    DisableCharacterCollision(46665840);
-    DisableCharacter(46660850);
-    DisableCharacterCollision(46660850);
-    DisableCharacter(46665850);
-    DisableCharacterCollision(46665850);
-    DisableCharacter(46660860);
-    DisableCharacterCollision(46660860);
-    DisableCharacter(46665860);
-    DisableCharacterCollision(46665860);
-    DisableCharacter(46660870);
-    DisableCharacterCollision(46660870);
-    DisableCharacter(46665870);
-    DisableCharacterCollision(46665870);
-    DisableCharacter(46660880);
-    DisableCharacterCollision(46660880);
-    DisableCharacter(46665880);
-    DisableCharacterCollision(46665880);
-    DisableCharacter(46660890);
-    DisableCharacterCollision(46660890);
-    DisableCharacter(46665890);
-    DisableCharacterCollision(46665890);
-    
-WaitFor(
-    EventFlag(64150) || EventFlag(64151) || EventFlag(64152) || EventFlag(64153) || EventFlag(64154) ||
-    EventFlag(64155) || EventFlag(64156) || EventFlag(64157) || EventFlag(64158) || EventFlag(64159)
-);
 
 // Depending on roll, enable characters and group entity ids. Supports up to 10 variations. Does not need to be edited.
 if (EventFlag(64150)) {
