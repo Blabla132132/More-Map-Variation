@@ -10,12 +10,12 @@
 $Event(0, Default, function() {
         
     // Disable flags that will be used to roll for randomness
-    BatchSetEventFlags(64000, 64009, OFF);
+    BatchSetEventFlags(64190, 64199, OFF);
     
     // Set a random flag true which rolls what boss to spawn. Depends on amount of bosses in map file.
     // EDIT THIS WHEN ADDING/REMOVING BOSS
     if (HasMultiplayerState(MultiplayerState.Host))    
-    RandomlySetNetworkconnectedEventFlagInRange(64000, 64003, ON);
+        RandomlySetNetworkconnectedEventFlagInRange(64190, 64193, ON);
     
     // Disable all the potential character entityids and group entityids. Supports up to 10 variations. Does not need to be edited.
     DisableCharacter(46710800);
@@ -58,74 +58,79 @@ $Event(0, Default, function() {
     DisableCharacterCollision(46710890);
     DisableCharacter(46715890);
     DisableCharacterCollision(46715890);
+    
+WaitFor(
+    EventFlag(64190) || EventFlag(64191) || EventFlag(64192) || EventFlag(64193) || EventFlag(64194) ||
+    EventFlag(64195) || EventFlag(64196) || EventFlag(64197) || EventFlag(64198) || EventFlag(64199)
+);
 
-    // Depending on roll, enable characters and group entity ids. Supports up to 10 variations. Does not need to be edited.
-    if (EventFlag(64000)) {
-        EnableCharacter(46710800);
-        EnableCharacterCollision(46710800);
-        EnableCharacter(46715800);
-        EnableCharacterCollision(46715800);
-    }
-    if (EventFlag(64001)) {
-        EnableCharacter(46710810);
-        EnableCharacterCollision(46710810);
-        EnableCharacter(46715810);
-        EnableCharacterCollision(46715810);
-    }
-    if (EventFlag(64002)) {
-        EnableCharacter(46710820);
-        EnableCharacterCollision(46710820);
-        EnableCharacter(46715820);
-        EnableCharacterCollision(46715820);
-    }
-    if (EventFlag(64003)) {
-        EnableCharacter(46710830);
-        EnableCharacterCollision(46710830);
-        EnableCharacter(46715830);
-        EnableCharacterCollision(46715830);
-    }
+// Depending on roll, enable characters and group entity ids. Supports up to 10 variations. Does not need to be edited.
+if (EventFlag(64190)) {
+    EnableCharacter(46710800);
+    EnableCharacterCollision(46710800);
+    EnableCharacter(46715800);
+    EnableCharacterCollision(46715800);
+}
+if (EventFlag(64191)) {
+    EnableCharacter(46710810);
+    EnableCharacterCollision(46710810);
+    EnableCharacter(46715810);
+    EnableCharacterCollision(46715810);
+}
+if (EventFlag(64192)) {
+    EnableCharacter(46710820);
+    EnableCharacterCollision(46710820);
+    EnableCharacter(46715820);
+    EnableCharacterCollision(46715820);
+}
+if (EventFlag(64193)) {
+    EnableCharacter(46710830);
+    EnableCharacterCollision(46710830);
+    EnableCharacter(46715830);
+    EnableCharacterCollision(46715830);
+}
 
-    if (EventFlag(64004)) {
-        EnableCharacter(46710840);
-        EnableCharacterCollision(46710840);
-        EnableCharacter(46715840);
-        EnableCharacterCollision(46715840);
-    }
+if (EventFlag(64194)) {
+    EnableCharacter(46710840);
+    EnableCharacterCollision(46710840);
+    EnableCharacter(46715840);
+    EnableCharacterCollision(46715840);
+}
 
-    if (EventFlag(64005)) {
-        EnableCharacter(46710850);
-        EnableCharacterCollision(46710850);
-        EnableCharacter(46715850);
-        EnableCharacterCollision(46715850);
-    }
+if (EventFlag(64195)) {
+    EnableCharacter(46710850);
+    EnableCharacterCollision(46710850);
+    EnableCharacter(46715850);
+    EnableCharacterCollision(46715850);
+}
 
-    if (EventFlag(64006)) {
-        EnableCharacter(46710860);
-        EnableCharacterCollision(46710860);
-        EnableCharacter(46715860);
-        EnableCharacterCollision(46715860);
-    }
+if (EventFlag(64196)) {
+    EnableCharacter(46710860);
+    EnableCharacterCollision(46710860);
+    EnableCharacter(46715860);
+    EnableCharacterCollision(46715860);
+}
 
-    if (EventFlag(64007)) {
-        EnableCharacter(46710870);
-        EnableCharacterCollision(46710870);
-        EnableCharacter(46715870);
-        EnableCharacterCollision(46715870);
-    }  
-  
-    if (EventFlag(64008)) {
-        EnableCharacter(46710880);
-        EnableCharacterCollision(46710880);
-        EnableCharacter(46715880);
-        EnableCharacterCollision(46715880);
-    } 
+if (EventFlag(64197)) {
+    EnableCharacter(46710870);
+    EnableCharacterCollision(46710870);
+    EnableCharacter(46715870);
+    EnableCharacterCollision(46715870);
+}
 
-    if (EventFlag(64009)) {
-        EnableCharacter(46710890);
-        EnableCharacterCollision(46710890);
-        EnableCharacter(46715890);
-        EnableCharacterCollision(46715890);
-    }
+if (EventFlag(64198)) {
+    EnableCharacter(46710880);
+    EnableCharacterCollision(46710880);
+    EnableCharacter(46715880);
+    EnableCharacterCollision(46715880);
+}
+
+if (EventFlag(64199)) {
+    EnableCharacter(46710890);
+    EnableCharacterCollision(46710890);
+    EnableCharacter(46715890);
+    EnableCharacterCollision(46715890);
+}
         
     $InitializeCommonEvent(0, 90015000, 0, 46710800, 903800710, 30, 0, 0);
     $InitializeCommonEvent(0, 90015030, 0, 46710800, 30, 920210, 0);

@@ -10,12 +10,12 @@
 $Event(0, Default, function() {
         
     // Disable flags that will be used to roll for randomness
-    BatchSetEventFlags(64000, 64009, OFF);
+    BatchSetEventFlags(64030, 64039, OFF);
     
     // Set a random flag true which rolls what boss to spawn. Depends on amount of bosses in map file.
     // EDIT THIS WHEN ADDING/REMOVING BOSS
     if (HasMultiplayerState(MultiplayerState.Host))
-        RandomlySetNetworkconnectedEventFlagInRange(64000, 64003, ON);
+        RandomlySetNetworkconnectedEventFlagInRange(64030, 64033, ON);
     
     // Disable all the potential character entityids and group entityids. Supports up to 10 variations. Does not need to be edited.
     DisableCharacter(46520800);
@@ -58,74 +58,79 @@ $Event(0, Default, function() {
     DisableCharacterCollision(46520890);
     DisableCharacter(46525890);
     DisableCharacterCollision(46525890);
+    
+    WaitFor(
+    EventFlag(64030) || EventFlag(64031) || EventFlag(64032) || EventFlag(64033) || EventFlag(64034) ||
+    EventFlag(64035) || EventFlag(64036) || EventFlag(64037) || EventFlag(64038) || EventFlag(64039)
+    );
 
     // Depending on roll, enable characters and group entity ids. Supports up to 10 variations. Does not need to be edited.
-    if (EventFlag(64000)) {
-        EnableCharacter(46520800);
-        EnableCharacterCollision(46520800);
-        EnableCharacter(46525800);
-        EnableCharacterCollision(46525800);
-    }
-    if (EventFlag(64001)) {
-        EnableCharacter(46520810);
-        EnableCharacterCollision(46520810);
-        EnableCharacter(46525810);
-        EnableCharacterCollision(46525810);
-    }
-    if (EventFlag(64002)) {
-        EnableCharacter(46520820);
-        EnableCharacterCollision(46520820);
-        EnableCharacter(46525820);
-        EnableCharacterCollision(46525820);
-    }
-    if (EventFlag(64003)) {
-        EnableCharacter(46520830);
-        EnableCharacterCollision(46520830);
-        EnableCharacter(46525830);
-        EnableCharacterCollision(46525830);
-    }
+if (EventFlag(64030)) {
+    EnableCharacter(46520800);
+    EnableCharacterCollision(46520800);
+    EnableCharacter(46525800);
+    EnableCharacterCollision(46525800);
+}
+if (EventFlag(64031)) {
+    EnableCharacter(46520810);
+    EnableCharacterCollision(46520810);
+    EnableCharacter(46525810);
+    EnableCharacterCollision(46525810);
+}
+if (EventFlag(64032)) {
+    EnableCharacter(46520820);
+    EnableCharacterCollision(46520820);
+    EnableCharacter(46525820);
+    EnableCharacterCollision(46525820);
+}
+if (EventFlag(64033)) {
+    EnableCharacter(46520830);
+    EnableCharacterCollision(46520830);
+    EnableCharacter(46525830);
+    EnableCharacterCollision(46525830);
+}
 
-    if (EventFlag(64004)) {
-        EnableCharacter(46520840);
-        EnableCharacterCollision(46520840);
-        EnableCharacter(46525840);
-        EnableCharacterCollision(46525840);
-    }
+if (EventFlag(64034)) {
+    EnableCharacter(46520840);
+    EnableCharacterCollision(46520840);
+    EnableCharacter(46525840);
+    EnableCharacterCollision(46525840);
+}
 
-    if (EventFlag(64005)) {
-        EnableCharacter(46520850);
-        EnableCharacterCollision(46520850);
-        EnableCharacter(46525850);
-        EnableCharacterCollision(46525850);
-    }
+if (EventFlag(64035)) {
+    EnableCharacter(46520850);
+    EnableCharacterCollision(46520850);
+    EnableCharacter(46525850);
+    EnableCharacterCollision(46525850);
+}
 
-    if (EventFlag(64006)) {
-        EnableCharacter(46520860);
-        EnableCharacterCollision(46520860);
-        EnableCharacter(46525860);
-        EnableCharacterCollision(46525860);
-    }
+if (EventFlag(64036)) {
+    EnableCharacter(46520860);
+    EnableCharacterCollision(46520860);
+    EnableCharacter(46525860);
+    EnableCharacterCollision(46525860);
+}
 
-    if (EventFlag(64007)) {
-        EnableCharacter(46520870);
-        EnableCharacterCollision(46520870);
-        EnableCharacter(46525870);
-        EnableCharacterCollision(46525870);
-    }  
-  
-    if (EventFlag(64008)) {
-        EnableCharacter(46520880);
-        EnableCharacterCollision(46520880);
-        EnableCharacter(46525880);
-        EnableCharacterCollision(46525880);
-    } 
+if (EventFlag(64037)) {
+    EnableCharacter(46520870);
+    EnableCharacterCollision(46520870);
+    EnableCharacter(46525870);
+    EnableCharacterCollision(46525870);
+}
 
-    if (EventFlag(64009)) {
-        EnableCharacter(46520890);
-        EnableCharacterCollision(46520890);
-        EnableCharacter(46525890);
-        EnableCharacterCollision(46525890);
-    }
+if (EventFlag(64038)) {
+    EnableCharacter(46520880);
+    EnableCharacterCollision(46520880);
+    EnableCharacter(46525880);
+    EnableCharacterCollision(46525880);
+}
+
+if (EventFlag(64039)) {
+    EnableCharacter(46520890);
+    EnableCharacterCollision(46520890);
+    EnableCharacter(46525890);
+    EnableCharacterCollision(46525890);
+}
  
     $InitializeCommonEvent(0, 90015000, 0, 46520800, 903250600, 30, 0, 0);
     $InitializeCommonEvent(0, 90015030, 0, 46520800, 30, 920210, 0);

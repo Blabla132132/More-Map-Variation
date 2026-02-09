@@ -10,12 +10,12 @@
 $Event(0, Default, function() {
         
     // Disable flags that will be used to roll for randomness
-    BatchSetEventFlags(64000, 64009, OFF);
+    BatchSetEventFlags(64060, 64069, OFF);
     
     // Set a random flag true which rolls what boss to spawn. Depends on amount of bosses in map file.
     // EDIT THIS WHEN ADDING/REMOVING BOSS
     if (HasMultiplayerState(MultiplayerState.Host))    
-    RandomlySetNetworkconnectedEventFlagInRange(64000, 64001, ON);
+        RandomlySetNetworkconnectedEventFlagInRange(64060, 64061, ON);
     
     // Disable all the potential character entityids and group entityids. Supports up to 10 variations. Does not need to be edited.
     DisableCharacter(46550800);
@@ -58,9 +58,14 @@ $Event(0, Default, function() {
     DisableCharacterCollision(46550890);
     DisableCharacter(46555890);
     DisableCharacterCollision(46555890);
+    
+    WaitFor(
+        EventFlag(64060) || EventFlag(64061) || EventFlag(64062) || EventFlag(64063) || EventFlag(64064) ||
+        EventFlag(64065) || EventFlag(64066) || EventFlag(64067) || EventFlag(64068) || EventFlag(64069)
+    );
 
     // Depending on roll, enable characters and group entity ids. Supports up to 10 variations. Does not need to be edited.
-    if (EventFlag(64000)) {
+    if (EventFlag(64060)) {
         EnableCharacter(46550800);
         EnableCharacterCollision(46550800);
         EnableCharacter(46555800);
@@ -68,26 +73,32 @@ $Event(0, Default, function() {
     }
         
     // Roll to decide what Watchdog version
-    if (EventFlag(64001)) {
+    if (EventFlag(64061)) {
         
-        BatchSetNetworkconnectedEventFlags(64010, 64019, OFF);
-        RandomlySetNetworkconnectedEventFlagInRange(64010, 64012, ON);
+    BatchSetEventFlags(65060, 65069, OFF);
+    if (HasMultiplayerState(MultiplayerState.Host))    
+        RandomlySetNetworkconnectedEventFlagInRange(65060, 65062, ON);
+    
+        WaitFor(
+            EventFlag(65060) || EventFlag(65061) || EventFlag(65062) || EventFlag(65063) || EventFlag(65064) || 
+            EventFlag(65065) || EventFlag(65066) || EventFlag(65067) || EventFlag(65068) || EventFlag(65069)
+        );
         
-        if (EventFlag(64010)) {
+        if (EventFlag(65060)) {
             EnableCharacter(46550810);
             EnableCharacterCollision(46550810);
             EnableCharacter(46555810);
             EnableCharacterCollision(46555810);
         }
         
-        if (EventFlag(64011)) {
+        if (EventFlag(65061)) {
             EnableCharacter(46550820);
             EnableCharacterCollision(46550820);
             EnableCharacter(46555820);
             EnableCharacterCollision(46555820);
         }
 
-        if (EventFlag(64012)) {
+        if (EventFlag(65062)) {
             EnableCharacter(46550830);
             EnableCharacterCollision(46550830);
             EnableCharacter(46555830);
@@ -95,42 +106,42 @@ $Event(0, Default, function() {
         }
     }
 
-    if (EventFlag(64002)) {
+    if (EventFlag(64062)) {
         EnableCharacter(46550840);
         EnableCharacterCollision(46550840);
         EnableCharacter(46555840);
         EnableCharacterCollision(46555840);
     }
 
-    if (EventFlag(64003)) {
+    if (EventFlag(64063)) {
         EnableCharacter(46550850);
         EnableCharacterCollision(46550850);
         EnableCharacter(46555850);
         EnableCharacterCollision(46555850);
     }
 
-    if (EventFlag(64004)) {
+    if (EventFlag(64064)) {
         EnableCharacter(46550860);
         EnableCharacterCollision(46550860);
         EnableCharacter(46555860);
         EnableCharacterCollision(46555860);
     }
 
-    if (EventFlag(64005)) {
+    if (EventFlag(64065)) {
         EnableCharacter(46550870);
         EnableCharacterCollision(46550870);
         EnableCharacter(46555870);
         EnableCharacterCollision(46555870);
     }  
   
-    if (EventFlag(64006)) {
+    if (EventFlag(64066)) {
         EnableCharacter(46550880);
         EnableCharacterCollision(46550880);
         EnableCharacter(46555880);
         EnableCharacterCollision(46555880);
     } 
 
-    if (EventFlag(64007)) {
+    if (EventFlag(64067)) {
         EnableCharacter(46550890);
         EnableCharacterCollision(46550890);
         EnableCharacter(46555890);
