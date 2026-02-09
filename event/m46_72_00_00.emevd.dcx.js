@@ -15,7 +15,7 @@ $Event(0, Default, function() {
     // Set a random flag true which rolls what boss to spawn. Depends on amount of bosses in map file.
     // EDIT THIS WHEN ADDING/REMOVING BOSS
     if (HasMultiplayerState(MultiplayerState.Host))    
-    RandomlySetNetworkconnectedEventFlagInRange(64000, 64003, ON);
+        RandomlySetNetworkconnectedEventFlagInRange(64000, 64000, ON);
     
     // Disable all the potential character entityids and group entityids. Supports up to 10 variations. Does not need to be edited.
     DisableCharacter(46720800);
@@ -60,12 +60,12 @@ $Event(0, Default, function() {
     DisableCharacterCollision(46725890);
 
     // Depending on roll, enable characters and group entity ids. Supports up to 10 variations. Does not need to be edited.
-    if (EventFlag(64000)) {
+        
+        WaitFor(EventFlag(64000));
         EnableCharacter(46720800);
         EnableCharacterCollision(46720800);
         EnableCharacter(46725800);
         EnableCharacterCollision(46725800);
-    }
     if (EventFlag(64001)) {
         EnableCharacter(46720810);
         EnableCharacterCollision(46720810);
