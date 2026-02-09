@@ -80,32 +80,32 @@ $Event(0, Default, function() {
     DisableCharacterCollision(46655890);
 
     // Depending on roll, enable characters and group entity ids. Supports up to 10 variations. Does not need to be edited.
-    if (CharacterHasSpEffect(10002, 64000)) {
+    if (EventFlag(64000)) {
         EnableCharacter(46650800);
         EnableCharacterCollision(46650800);
         EnableCharacter(46655800);
         EnableCharacterCollision(46655800);
     }
-    if (CharacterHasSpEffect(10002, 64001)) {
+    if (EventFlag(64001)) {
         EnableCharacter(46650810);
         EnableCharacterCollision(46650810);
         EnableCharacter(46655810);
         EnableCharacterCollision(46655810);
     }
-    if (CharacterHasSpEffect(10002, 64002)) {
+    if (EventFlag(64002)) {
         EnableCharacter(46650820);
         EnableCharacterCollision(46650820);
         EnableCharacter(46655820);
         EnableCharacterCollision(46655820);
     }
-    if (CharacterHasSpEffect(10002, 64003)) {
+    if (EventFlag(64003)) {
         EnableCharacter(46650830);
         EnableCharacterCollision(46650830);
         EnableCharacter(46655830);
         EnableCharacterCollision(46655830);
     }
 
-    if (CharacterHasSpEffect(10002, 64004)) {
+    if (EventFlag(64004)) {
         EnableCharacter(46650840);
         EnableCharacterCollision(46650840);
         EnableCharacter(46655840);
