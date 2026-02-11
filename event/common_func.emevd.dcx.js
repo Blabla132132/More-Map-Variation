@@ -10912,7 +10912,7 @@ $Event(90065123, Restart, function(chrEntityId, chrEntityId2, eventFlagId, event
     WaitFor(EventFlag(eventFlagId));
     WaitFor(HPRatio(chrEntityId) <= 0 || CharacterHasSpEffect(chrEntityId, 14601));
     WarpCharacterAndCopyFloor(chrEntityId2, TargetEntityType.Character, chrEntityId, 900, chrEntityId);
-    WaitFor(ElapsedSeconds(5));
+    WaitFor(ElapsedSeconds(4));
     DisplayBossHealthBar(Disabled, chrEntityId, 0, nameId)
     SpawnOneshotSFX(TargetEntityType.Character, chrEntityId2, 900, 621196);
     SetNetworkUpdateRate(chrEntityId2, true, CharacterUpdateFrequency.AlwaysUpdate);
@@ -10966,7 +10966,6 @@ L10:
     if (!IsMapVariation(2)) {
         SetBossBGM(bgmBossConvParamId, BossBGMState.Start);
     }
-    WaitFor(ElapsedSeconds(5));
     DisplayBossHealthBar(Disabled, chrEntityId, 0, nameId);
     WarpCharacterAndCopyFloor(chrEntityId2, TargetEntityType.Character, chrEntityId, 900, chrEntityId);
     SpawnOneshotSFX(TargetEntityType.Character, chrEntityId2, 900, sfxId);
@@ -11021,7 +11020,7 @@ $Event(90065125, Restart, function(chrEntityId, chrEntityId2, eventFlagId, event
         WarpCharacterAndCopyFloor(chrEntityId2, TargetEntityType.Character, chrEntityId, 900, chrEntityId);
         WaitFor(ElapsedSeconds(5));
         DisplayBossHealthBar(Disabled, chrEntityId, 0, nameId)
-        SpawnOneshotSFX(TargetEntityType.Character, chrEntityId2, 900, 621196);
+        SpawnOneshotSFX(TargetEntityType.Character, chrEntityId2, 900, 690048);
         SetNetworkUpdateRate(chrEntityId2, true, CharacterUpdateFrequency.AlwaysUpdate);
         DisableCharacterHPBarDisplay(chrEntityId2);
         WaitFor(ElapsedSeconds(4));
