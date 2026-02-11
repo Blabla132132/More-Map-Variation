@@ -10914,6 +10914,7 @@ $Event(90065123, Restart, function(chrEntityId, chrEntityId2, eventFlagId, event
     WarpCharacterAndCopyFloor(chrEntityId2, TargetEntityType.Character, chrEntityId, 900, chrEntityId);
     WaitFor(ElapsedSeconds(4));
     DisplayBossHealthBar(Disabled, chrEntityId, 0, nameId)
+    // Phase 2 spawn visual
     SpawnOneshotSFX(TargetEntityType.Character, chrEntityId2, 900, 621196);
     SetNetworkUpdateRate(chrEntityId2, true, CharacterUpdateFrequency.AlwaysUpdate);
     DisableCharacterHPBarDisplay(chrEntityId2);
