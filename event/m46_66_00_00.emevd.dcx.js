@@ -8,74 +8,6 @@
 // ==/EMEVD==
 
 $Event(0, Default, function() {
-
-// Depending on roll, enable characters and group entity ids. Supports up to 10 variations. Does not need to be edited.
-if (EventFlag(64150)) {
-    EnableCharacter(46660800);
-    EnableCharacterCollision(46660800);
-    EnableCharacter(46665800);
-    EnableCharacterCollision(46665800);
-}
-if (EventFlag(64151)) {
-    EnableCharacter(46660810);
-    EnableCharacterCollision(46660810);
-    EnableCharacter(46665810);
-    EnableCharacterCollision(46665810);
-}
-if (EventFlag(64152)) {
-    EnableCharacter(46660820);
-    EnableCharacterCollision(46660820);
-    EnableCharacter(46665820);
-    EnableCharacterCollision(46665820);
-}
-if (EventFlag(64153)) {
-    EnableCharacter(46660830);
-    EnableCharacterCollision(46660830);
-    EnableCharacter(46665830);
-    EnableCharacterCollision(46665830);
-}
-
-if (EventFlag(64154)) {
-    EnableCharacter(46660840);
-    EnableCharacterCollision(46660840);
-    EnableCharacter(46665840);
-    EnableCharacterCollision(46665840);
-}
-
-if (EventFlag(64155)) {
-    EnableCharacter(46660850);
-    EnableCharacterCollision(46660850);
-    EnableCharacter(46665850);
-    EnableCharacterCollision(46665850);
-}
-
-if (EventFlag(64156)) {
-    EnableCharacter(46660860);
-    EnableCharacterCollision(46660860);
-    EnableCharacter(46665860);
-    EnableCharacterCollision(46665860);
-}
-
-if (EventFlag(64157)) {
-    EnableCharacter(46660870);
-    EnableCharacterCollision(46660870);
-    EnableCharacter(46665870);
-    EnableCharacterCollision(46665870);
-}
-
-if (EventFlag(64158)) {
-    EnableCharacter(46660880);
-    EnableCharacterCollision(46660880);
-    EnableCharacter(46665880);
-    EnableCharacterCollision(46665880);
-}
-
-if (EventFlag(64159)) {
-    EnableCharacter(46660890);
-    EnableCharacterCollision(46660890);
-    EnableCharacter(46665890);
-    EnableCharacterCollision(46665890);
-}
     
     $InitializeCommonEvent(0, 90015000, 0, 46660800, 904770001, 30, 0, 0);
     $InitializeCommonEvent(0, 90015030, 0, 46660800, 30, 931010, 0);
@@ -83,18 +15,18 @@ if (EventFlag(64159)) {
     $InitializeCommonEvent(0, 9005810, 46660800, 46660500, 46661500, 5);
     $InitializeCommonEvent(0, 90015005, 46661500, 46662800, 46660800);
     $InitializeCommonEvent(0, 90015000, 0, 46660810, 905820600, 30, 0, 0);
-    $InitializeCommonEvent(0, 90015030, 0, 46660810, 30, 931010, 0);
-    $InitializeCommonEvent(0, 90015002, 0, 0, 46660810, 46660810, 1020, 931010, 11290, 905820600, 46660810);
+    $InitializeCommonEvent(0, 90015030, 0, 46660810, 30, 931000, 0);
+    $InitializeCommonEvent(0, 90015002, 0, 0, 46660810, 46660810, 1020, 931000, 11290, 905820600, 46660810);
     $InitializeCommonEvent(0, 9005810, 46660810, 46660500, 46661500, 5);
     $InitializeCommonEvent(0, 90015005, 46661500, 46662800, 46660810);
     $InitializeCommonEvent(0, 90015000, 0, 46660820, 905210600, 30, 0, 0);
-    $InitializeCommonEvent(0, 90015030, 0, 46660820, 30, 931010, 0);
-    $InitializeCommonEvent(0, 90015002, 0, 0, 46660820, 46660820, 1020, 931010, 11290, 905210600, 46660820);
+    $InitializeCommonEvent(0, 90015030, 0, 46660820, 30, 950000, 0);
+    $InitializeCommonEvent(0, 90015002, 0, 0, 46660820, 46660820, 1020, 950000, 11290, 905210600, 46660820);
     $InitializeCommonEvent(0, 9005810, 46660820, 46660500, 46661500, 5);
     $InitializeCommonEvent(0, 90015005, 46661500, 46662800, 46660820);
     $InitializeCommonEvent(0, 90015000, 0, 46660830, 904680320, 30, 0, 0);
-    $InitializeCommonEvent(0, 90015030, 0, 46660830, 30, 931010, 0);
-    $InitializeCommonEvent(0, 90015002, 0, 0, 46660830, 46660830, 1020, 931010, 11290, 904680320, 46660830);
+    $InitializeCommonEvent(0, 90015030, 0, 46660830, 30, 920800, 0);
+    $InitializeCommonEvent(0, 90015002, 0, 0, 46660830, 46660830, 1020, 920800, 11290, 904680320, 46660830);
     $InitializeCommonEvent(0, 9005810, 46660830, 46660500, 46661500, 5);
     $InitializeCommonEvent(0, 90015005, 46661500, 46662800, 46660830);
     GotoIf(S0, Signed(0) != 0);
@@ -102,9 +34,9 @@ if (EventFlag(64159)) {
     Goto(S1);
 S0:
     $InitializeCommonEvent(0, 90015008, 0, 46660800, 931010, 46660800, 0, 0);
-    $InitializeCommonEvent(0, 90015008, 0, 46660810, 931010, 46660810, 0, 0);
-    $InitializeCommonEvent(0, 90015008, 0, 46660820, 931010, 46660820, 0, 0);
-    $InitializeCommonEvent(0, 90015008, 0, 46660830, 931010, 46660830, 0, 0);
+    $InitializeCommonEvent(0, 90015008, 0, 46660810, 931000, 46660810, 0, 0);
+    $InitializeCommonEvent(0, 90015008, 0, 46660820, 950000, 46660820, 0, 0);
+    $InitializeCommonEvent(0, 90015008, 0, 46660830, 920800, 46660830, 0, 0);
 S1:
     if (1 != 0) {
         $InitializeCommonEvent(0, 90015013);

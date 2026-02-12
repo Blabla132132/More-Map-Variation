@@ -10,27 +10,27 @@
 $Event(0, Default, function() {
         
     $InitializeCommonEvent(0, 90015000, 0, 46590800, 904270600, 30, 0, 0);
-    $InitializeCommonEvent(0, 90015030, 0, 46590800, 30, 921210, 0);
-    $InitializeCommonEvent(0, 90015002, 0, 0, 46590800, 46590800, 1020, 921210, 11290, 904270600, 46590800);
+    $InitializeCommonEvent(0, 90015030, 0, 46590800, 30, 950010, 0);
+    $InitializeCommonEvent(0, 90015002, 0, 0, 46590800, 46590800, 1020, 950010, 11290, 904270600, 46590800);
     $InitializeCommonEvent(0, 9005810, 46590800, 46590500, 46591500, 5);
     $InitializeCommonEvent(0, 90015005, 46591500, 46592800, 46590800);
     $InitializeCommonEvent(0, 90015000, 0, 46595810, 904470003, 30, 0, 0);
-    $InitializeCommonEvent(0, 90015030, 0, 46595810, 30, 921210, 0);
-    $InitializeCommonEvent(0, 90015002, 0, 0, 46595810, 46595810, 1020, 921210, 11290, 904470003, 46595810);
+    $InitializeCommonEvent(0, 90015030, 0, 46595810, 30, 940000, 0);
+    $InitializeCommonEvent(0, 90015002, 0, 0, 46595810, 46595810, 1020, 940000, 11290, 904470003, 46595810);
     $InitializeCommonEvent(0, 9005810, 46595810, 46590500, 46591500, 5);
     $InitializeCommonEvent(0, 90015005, 46591500, 46592800, 46595810);
     $InitializeCommonEvent(0, 90015000, 0, 46590820, 904580600, 30, 0, 0);
-    $InitializeCommonEvent(0, 90015030, 0, 46590820, 30, 921210, 0);
-    $InitializeCommonEvent(0, 90015002, 0, 0, 46590820, 46590820, 1020, 921210, 11290, 904580600, 46590820);
+    $InitializeCommonEvent(0, 90015030, 0, 46590820, 30, 921200, 0);
+    $InitializeCommonEvent(0, 90015002, 0, 0, 46590820, 46590820, 1020, 921200, 11290, 904580600, 46590820);
     $InitializeCommonEvent(0, 9005810, 46590820, 46590500, 46591500, 5);
     $InitializeCommonEvent(0, 90015005, 46591500, 46592800, 46590820);
     GotoIf(S0, Signed(0) != 0);
     GotoIf(S0, 0 != 0);
     Goto(S1);
 S0:
-    $InitializeCommonEvent(0, 90015008, 0, 46590800, 921210, 46590800, 0, 0);
-    $InitializeCommonEvent(0, 90015008, 0, 46590800, 921210, 46595810, 0, 0);
-    $InitializeCommonEvent(0, 90015008, 0, 46590800, 921210, 46590820, 0, 0);
+    $InitializeCommonEvent(0, 90015008, 0, 46590800, 950010, 46590800, 0, 0);
+    $InitializeCommonEvent(0, 90015008, 0, 46590800, 940000, 46595810, 0, 0);
+    $InitializeCommonEvent(0, 90015008, 0, 46590800, 921200, 46590820, 0, 0);
 S1:
     if (0 != 0) {
         $InitializeCommonEvent(0, 90015013);
