@@ -9,7 +9,7 @@
 
 $Event(0, Default, function() {
     
-    $InitializeCommonEvent(0, 90015000, 0, 46560800, 912000060, 30, 0, 0);
+    $InitializeCommonEvent(0, 90015000, 0, 46560800, 903100600, 30, 0, 0);
     $InitializeCommonEvent(0, 90015030, 0, 46560800, 30, 921010, 0);
     $InitializeCommonEvent(0, 90015002, 0, 0, 46560800, 46560800, 1020, 921010, 11290, 903100600, 46560800);
     $InitializeCommonEvent(0, 9005810, 46560800, 46560500, 46561500, 5);
