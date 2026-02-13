@@ -115,7 +115,7 @@ L0:
     EnableCharacter(chrEntityId);
     EnableCharacterCollision(chrEntityId);
     EnableCharacterAI(chrEntityId);
-    ForceAnimationPlayback(49600800, 20012, false, false, false);
+    ForceAnimationPlayback(49600800, 20000, false, false, false);
     DisableCharacterHPBarDisplay(chrEntityId);
     DisableCharacterHPBarDisplay(49600801);
     EnableCharacterAI(chrEntityId);
