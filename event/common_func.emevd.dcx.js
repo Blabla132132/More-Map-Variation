@@ -9501,7 +9501,9 @@ L0:
     }
     PlaySE(areaEntityId, SoundType.CharacterMotion, 999997310);
     WaitFor(ElapsedSeconds(2));
-    ForceAnimationPlayback(chrEntityId, 20026, false, false, false);
+    // Fix for Elder Albinaurics being put in a cage
+    if (chrEntityId != 49665200)
+        ForceAnimationPlayback(chrEntityId, 20026, false, false, false);
     EnableCharacter(chrEntityId);
     EnableCharacterAI(chrEntityId);
     WaitFor(ElapsedSeconds(120));
